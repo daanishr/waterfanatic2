@@ -48,8 +48,8 @@
     try {
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $company_name = $_POST['company_name'];
         $date = date("Y-m-d");
+        $company_name = $_POST['company_name'];
         // Insert data
         $sql_insert = "INSERT INTO registration_tbl (name, email, date, company_name) 
                    VALUES (?,?,?)";
@@ -74,13 +74,13 @@
         echo "<table>";
         echo "<tr><th>Name</th>";
         echo "<th>Email</th>";
-        echo "<th>Company_name</th>";
-        echo "<th>Date</th></tr>";
+        echo "<th>Date</th>";
+        echo "<th>Company_name</th></tr>";
         foreach($registrants as $registrant) {
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
-            echo "<td>".$registrants['company_name']."</td>";
-            echo "<td>".$registrant['date']."</td></tr>";
+            echo "<td>".$registrant['date']."</td>";
+            echo "<td>".$registrants['company_name']."</td></tr>";
         }
         echo "</table>";
     } else {
