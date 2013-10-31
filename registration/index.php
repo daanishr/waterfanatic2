@@ -57,7 +57,7 @@
         $stmt->bindValue(1, $name);
         $stmt->bindValue(2, $email);
         $stmt->bindValue(3, $date);
-         $stmt->bindValue(4, $company_name);
+        $stmt->bindValue(4, $company_name);
         $stmt->execute();
     }
     catch(Exception $e) {
@@ -74,7 +74,7 @@
         echo "<table>";
         echo "<tr><th>Name</th>";
         echo "<th>Email</th>";
-        echo "<th>Company_name </th>";
+        echo "<th>Company_name</th>";
         echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
             echo "<tr><td>".$registrant['name']."</td>";
