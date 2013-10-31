@@ -18,7 +18,7 @@
 <body>
 <h1>Register here!</h1>
 <p>
-	<button type = "button"> Search database </button>
+	<p> <a href ="search.php" target-"_blank"> Search Database </>
 </p>
 <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >

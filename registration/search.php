@@ -1,7 +1,10 @@
 <html>
 <head>
+	
 </head>
 <body>
+	helloooo
+<!--
 <?php
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
@@ -58,6 +61,6 @@
         echo "<h3>No one is currently registered.</h3>";
     }
 ?>
-
+--//>
 </body>
 </html>
