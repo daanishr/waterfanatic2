@@ -52,7 +52,7 @@
         $company_name = $_POST['company_name'];
         // Insert data
         $sql_insert = "INSERT INTO registration_tbl (name, email, date, company_name) 
-                   VALUES (?,?,?)";
+                   VALUES (?,?,?,?)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $name);
         $stmt->bindValue(2, $email);
