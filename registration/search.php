@@ -5,20 +5,10 @@
 <body>
 	helloooo
 	
-	<form method="post" action="index.php" enctype="multipart/form-data" >
+	<form method="post" action="search.php" enctype="multipart/form-data" >
       Search word <input type="text" name="search_id" id="search_id"/></br>
       <input type="submit" name="submit" value="submit" />
 	</form>
-	
-	
-	
-	<form method="post" action="index.php" enctype="multipart/form-data" >
-      Name  <input type="text" name="name" id="name"/></br>
-      Email <input type="text" name="email" id="email"/></br>
-      Company Name <input type = "text" name="company_name" id = "company_name"/></br>
-      <input type="submit" name="submit" value="Submit" />
-</form>
-	
 	
 	<?php
     // DB connection info
@@ -69,7 +59,22 @@
     echo "<h3>Your're registered!</h3>";
     }
     **/
+    
+    //get search word
+    
+    
+    if(!empty($_POST)) {
+    try {
+    	$search_id = $_POST['search_id'];
+    }
+    catch(Exception $e) {
+        die(var_dump($e));
+    }
+    
+    
     // Retrieve data
+    
+    
     $sql_select = "SELECT * FROM registration_tbl WHERE 'name' LIKE '%search_id%'";
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
