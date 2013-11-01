@@ -7,8 +7,9 @@
 	
 	<form method="post" action="search.php" enctype="multipart/form-data" >
       Search word <input type="text" name="search_id" id="search_id"/></br>
-      <input type="submit" name="submit" value="submit" />
+      <input type="submit" name="submit" value="search" />
 	</form>
+	
 	
 	<?php
 	/*
