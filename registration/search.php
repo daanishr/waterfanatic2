@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Search </title>	
+	<title> Search this database</title>	
 </head>
 <body>
 	<form method="post" action="search.php" enctype="multipart/form-data" >
