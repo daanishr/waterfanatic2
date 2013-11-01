@@ -11,6 +11,7 @@
 	</form>
 	
 	<?php
+	/*
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
@@ -61,7 +62,7 @@
     **/
     
     //get search word
-    
+    /*
     
     if(!empty($_POST)) {
     try {
@@ -95,6 +96,7 @@
     } else {
         echo "<h3>No result</h3>";
     }
+    **/
 ?>
 	
 </body>
