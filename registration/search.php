@@ -29,17 +29,34 @@
     if(!empty($_POST)) {
 		try {
 			$search_id = $_POST['search'];
+			//dsf
+		
 		}
 		catch(Exception $e) {
 			die(var_dump($e));
 		}
-	
+		
+		$sql_select = "SELECT * FROM registration_tbl WHERE name LIKE ?";
+		$stmt = $conn->prepare($sql_select);
+        $stmt->bindValue(1, '%'.$search_id.'%');
+        $stmt->execute();
 	
 		// Retrieve data
 	
-		$sql_select = "SELECT * FROM registration_tbl WHERE name LIKE '%$search_id%'";
-		$stmt = $conn->query($sql_select);
-		$registrants = $stmt->fetchAll(); 
+		//$sql_select = "SELECT * FROM registration_tbl WHERE name LIKE '%$search_id%'";
+		
+		/*
+		$stmt = $conn->prepare($sql_select);
+        $stmt->bindValue(1, $search_id);
+
+        $stmt->execute();
+		**/
+		//'%$search_id%'
+		//$stmt = $conn->query($sql_select);
+		
+		$registrants = $stmt->fetchAll();
+		
+	 
 		if(count($registrants) > 0) {
 			echo "<h2>Search results:</h2>";
 			echo "<table>";
